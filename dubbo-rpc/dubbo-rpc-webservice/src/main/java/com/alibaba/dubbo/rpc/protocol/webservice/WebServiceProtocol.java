@@ -108,8 +108,14 @@ public class WebServiceProtocol extends AbstractProxyProtocol {
             httpServer = httpBinder.bind(url, new WebServiceHandler());
             serverMap.put(addr, httpServer);
         }
+        //fix webservice  contextpath by micmiu
+        String contextpath = url.getParameter(Constants.CONTEXTPATH_KEY);
+        String address = url.getAbsolutePath();
+        if (contextpath != null && contextpath.length() > 0) {
+            address = address.substring(contextpath.length() + 1);
+        }
         final ServerFactoryBean serverFactoryBean = new ServerFactoryBean();
-        serverFactoryBean.setAddress(url.getAbsolutePath());
+        serverFactoryBean.setAddress(address);
     	serverFactoryBean.setServiceClass(type);
     	serverFactoryBean.setServiceBean(impl);
     	serverFactoryBean.setBus(bus);
