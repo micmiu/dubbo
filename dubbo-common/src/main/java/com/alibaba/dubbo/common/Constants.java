@@ -306,6 +306,8 @@ public class Constants {
 
     public static final String  PATH_KEY                           = "path";
 
+    public static final String  CONTEXTPATH_KEY                    = "contextpath";
+
     public static final String  INTERFACE_KEY                      = "interface";
 
     public static final String  GENERIC_KEY                        = "generic";
