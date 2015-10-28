@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.alibaba</groupId>
+		<artifactId>dubbo-parent</artifactId>
+		<version>2.4.11-micmiu</version>
+	</parent>
+	<artifactId>dubbo-demo-ws</artifactId>
+	<packaging>pom</packaging>
+	<name>${project.artifactId}</name>
+	<description>The ws module of dubbo demo project</description>
+	<properties>
+		<skip_maven_deploy>true</skip_maven_deploy>
+	</properties>
+	<modules>
+		<module>dubbo-demo-ws-api</module>
+		<module>dubbo-demo-ws-provider</module>
+		<module>dubbo-demo-ws-consumer</module>
+	</modules>
+</project>
