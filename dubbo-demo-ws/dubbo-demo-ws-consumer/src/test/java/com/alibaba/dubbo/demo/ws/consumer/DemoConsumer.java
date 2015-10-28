@@ -13,22 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.micmiu.dubbo.demo.ws.consumer;
+package com.alibaba.dubbo.demo.ws.consumer;
 
-import com.micmiu.dubbo.demo.ws.DemoService;
+import com.alibaba.dubbo.demo.ws.DemoService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+/**
+ * Created
+ * User: <a href="http://micmiu.com">micmiu</a>
+ * Date: 10/18/2015
+ * Time: 14:26
+ */
 public class DemoConsumer {
 
 	public static void main(String[] args) {
-		//com.alibaba.dubbo.container.Main.main(args);
+		com.alibaba.dubbo.container.Main.main(args);
 
-		main2();
+		//main2();
 
 	}
 
 	public static void main2() {
-		ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("META-INF/spring/*.xml");
+		ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("META-INF/spring/dubbo-demo-ws-consumer.xml");
 		classPathXmlApplicationContext.start();
 
 		DemoService demoService = (DemoService) classPathXmlApplicationContext.getBean("demoService");

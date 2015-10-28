@@ -13,19 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.micmiu.dubbo.demo.ws.provider;
+package com.alibaba.dubbo.demo.ws;
 
-import com.alibaba.dubbo.rpc.RpcContext;
-import com.micmiu.dubbo.demo.ws.DemoService;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+public interface DemoService {
 
-public class DemoServiceImpl implements DemoService {
+	String sayHello(String name);
 
-    public String sayHello(String name) {
-        System.out.println("[" + new SimpleDateFormat("HH:mm:ss").format(new Date()) + "] Hello " + name + ", request from consumer: " + RpcContext.getContext().getRemoteAddress());
-        return "Hello " + name + ", response form provider: " + RpcContext.getContext().getLocalAddress();
-    }
-    
 }
