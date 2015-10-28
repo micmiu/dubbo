@@ -1,6 +1,6 @@
-package com.micmiu.dubbo.demo.ws.consumer;
+package com.alibaba.dubbo.demo.ws.consumer;
 
-import com.micmiu.dubbo.demo.ws.DemoService;
+import com.alibaba.dubbo.demo.ws.DemoService;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
